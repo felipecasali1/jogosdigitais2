@@ -7,7 +7,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_merdl"]
 radius = 6.0
-height = 18.0
+height = 14.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b0kkn"]
 atlas = ExtResource("1_merdl")
@@ -111,11 +111,13 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=464659791]
+[node name="Player" type="CharacterBody2D" unique_id=464659791 groups=["player"]]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_b0kkn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=770509961]
-position = Vector2(0, -1)
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_merdl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=370715667]
